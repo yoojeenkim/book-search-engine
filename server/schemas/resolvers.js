@@ -55,9 +55,9 @@ const resolvers = {
 
                 await User.findOneAndUpdate(
                     {_id}
-                )
+                );
             }
-        }
+        },
     }
 }
 
