@@ -14,7 +14,7 @@ const resolvers = {
             return Book.find(params).sort({ createdAt: -1 });
         },
         book: async (parent, { bookId }) => {
-            return Book.findOne({ bookId: bookId });
+            return Book.findOne({ _id: bookId });
         },
         me: async (parent, args, context) => {
             if (context.user) {
