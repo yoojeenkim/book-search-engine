@@ -2,6 +2,9 @@
   "name": "book-search-engine",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "14.18.0"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",

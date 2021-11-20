@@ -4,7 +4,7 @@ import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from '@ap
 import { setContext } from '@apollo/client/link/context';
 import SearchBooks from './pages/SearchBooks';
 import SavedBooks from './pages/SavedBooks';
-import LoginForm from './pages/LoginForm';
+import LoginForm from './components/LoginForm';
 import SignupForm from './components/SignupForm';
 import Navbar from './components/Navbar';
 
