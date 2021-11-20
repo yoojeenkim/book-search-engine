@@ -6,8 +6,8 @@ const resolvers = {
         users: async () => {
             return User.find().populate('savedBooks');
         },
-        user: async (parent, { username }) => {
-            return User.findOne({ username }).populate('savedBooks');
+        user: async (parent, { userId }) => {
+            return User.findOne({ _id: userId }).populate('savedBooks');
         },
         books: async (parent, { username }) => {
             const params = username ? { username } : {};
@@ -46,17 +46,6 @@ const resolvers = {
             const token = signToken(user);
 
             return { token, user };
-        },
-        saveBook: async (parent, { placeholder }, context ) => {
-            if (context.user) {
-                const book = await Book.create({
-                    placeholder
-                });
-
-                await User.findOneAndUpdate(
-                    {_id}
-                );
-            }
         },
     }
 }
